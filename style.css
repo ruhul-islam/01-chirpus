@@ -1,60 +1,131 @@
+/* resets */
+
+body,
+h1,
+p {
+  margin: 0;
+}
+
 body {
-  font-family: Open Sans;
-  background-color: #f9fafc;
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
 }
 
-header {
-}
-header ul {
-  padding-left: 0;
-  color: #69696a;
-}
-header ul li {
-  padding: 3px;
-}
-header ul span {
-  color: #000;
+h1 {
+  font-size: 16px;
 }
 
-button {
-  border: 0;
-  background-color: #000;
-  text-align: center;
-  border-radius: 10px;
-  width: 100%;
-  padding: 5px;
+li {
+  list-style: none;
 }
-button a {
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header a {
   text-decoration: none;
-  color: #fff;
+  color: #69696a;
+  padding: 5px 5px 5px 0;
+  display: inline-block;
 }
 
-main p {
-  border-left: 2px solid #000;
+.accent {
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.call-to-action {
+  border-left: 3px solid black;
   padding-left: 10px;
-  color: #69696a;
+}
+
+.call-to-action-link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  margin-top: 10px;
 }
 
 footer {
   position: fixed;
-  left: 0;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   background-color: rgba(247, 193, 162, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
-footer ul {
-  color: #69696a;
-  padding-left: 0;
+footer nav ul {
+  display: flex;
 }
 
-footer ul li span {
-  color: #000;
-  float: left;
-  padding-left: 10px;
+footer a {
+  padding: 5px 0 5px 5px;
+  text-decoration: none;
+  color: black;
 }
 
-.float-r {
-  float: right;
-  padding: 0 10px 10px 10px;
+@media only screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+  }
+
+  header ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .c-1 {
+    background: rgba(207, 130, 213, 0.6);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 0;
+    top: 70px;
+  }
+  .c-2 {
+    background: rgba(247, 136, 167, 0.6);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    right: 35px;
+    top: 30px;
+  }
+  .c-3 {
+    background: rgba(247, 193, 162, 0.7);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 50px;
+    left: 50px;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  main ul {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info {
+    padding-right: 300px;
+  }
 }
